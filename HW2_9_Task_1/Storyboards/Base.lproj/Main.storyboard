@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2_9_Task_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOF-7t-6CA" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="40" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="org-cy-bSh" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="8" y="8" width="224" height="112"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="org-cy-bSh" secondAttribute="trailing" constant="8" id="9pl-3M-zSK"/>
+                                    <constraint firstItem="org-cy-bSh" firstAttribute="top" secondItem="qOF-7t-6CA" secondAttribute="top" constant="8" id="Oqo-Zw-LTg"/>
+                                    <constraint firstAttribute="bottom" secondItem="org-cy-bSh" secondAttribute="bottom" constant="8" id="S1i-uz-vCY"/>
+                                    <constraint firstItem="org-cy-bSh" firstAttribute="leading" secondItem="qOF-7t-6CA" secondAttribute="leading" constant="8" id="rdE-kS-8Pg"/>
+                                    <constraint firstAttribute="height" constant="128" id="yRT-mk-Xui"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsQ-J8-Cn4" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="432" width="240" height="36"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Spring Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsZ-tR-Tfg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EsQ-J8-Cn4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="2Ls-Uu-WJC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EsQ-J8-Cn4" secondAttribute="trailing" constant="40" id="5mH-Jm-YDJ"/>
+                            <constraint firstItem="qOF-7t-6CA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6CT-BC-SCY"/>
+                            <constraint firstItem="qOF-7t-6CA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="LYk-AG-cdI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qOF-7t-6CA" secondAttribute="trailing" constant="40" id="RYV-Uz-buU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EsQ-J8-Cn4" secondAttribute="bottom" constant="100" id="d9e-Rc-3Fu"/>
+                            <constraint firstItem="qOF-7t-6CA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fo8-9g-8Kl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="springAnimationLabel" destination="org-cy-bSh" id="B6D-da-Jxg"/>
+                        <outlet property="springAnimationView" destination="qOF-7t-6CA" id="0ra-gU-2RD"/>
+                        <outlet property="startSpringAnimationButton" destination="EsQ-J8-Cn4" id="osb-Gt-Qpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="137.32394366197184"/>
+        </scene>
+    </scenes>
+</document>
